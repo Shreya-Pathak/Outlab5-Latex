@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[total={6in, 8in}, margin=1.2in, bottom=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{bera}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\begin{document}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+\section {\textbf{Mathematical formulae and notations (15 marks)}}
+%
+\subsection{\textbf{Equation Array (4 marks)}}
+%
+\begin{eqnarray}
+cos^3\theta + sin^3\theta & = & (cos\theta + sin\theta)(cos2\theta - cos\theta sin\theta)\\
+& = & (cos\theta + sin\theta)(1 - cos\theta sin\theta)\\
+& = & (cos\theta + sin\theta)(1/2)(2 - 2cos\theta sin\theta)(3)\\
+& = & (1/2)(cos\theta + sin\theta)(2 - sin(2\theta))
+\end{eqnarray}
+%\textbf{(1)}
+
+\subsection {\textbf{Prepositional Formulae using Various Operators (2 marks)}}
+%
+\begin{flalign*}
+(\exists x)(\varphi(x) \wedge \psi(x)) & \longleftrightarrow ((\exists x)\varphi(x)\wedge (\exists x)\psi(x)) & \\
+\medskip
+(\exists x)(\varphi(x) \wedge \psi(x)) & \longrightarrow ((\exists x)\varphi(x) \wedge (\exists x)\varphi(x) \wedge (\exists x)\psi(x))
+\end{flalign*}
+
+\subsection {\textbf{Alphabets (3 marks + 1 mark for table)}}
+%
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Binary Operators: & $\times$ $\otimes$ $\oplus$ $\cup$ $\cap$ \\
+&\\
+\hline
+Relation Operators: & $\subset$ $\supset$ $\subseteq$ $\supseteq$ < > \\
+&\\
+\hline
+Others: & $\int$ $\oint$ $\sum$ $\prod$\\
+&\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection {\textbf{Mathematical Formulas (5 marks)}}
+%
+\begin{enumerate}[]%
+\item $ \int_a ^b x^3 dx = \frac{1}{4}x^4\Big\rvert_a ^b $
+\item $ \frac{\pi}{4} =  4\sum\limits_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)5^{2n+1}}  -  \sum\limits_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)239^{2n+1}} $
+\item $ \pi = \frac{3\sqrt{3}}{4} -24\sum\limits_{n=0}^{\infty} \frac{\frac{(2n)!}{n}}{2n+1(2n+1)239^{2n+1}} $
+\item $\frac{1}{\pi} = \frac{2\sqrt{2}}{9801}\sum\limits_{n=0}^{\infty}\frac{(4n)!(1103 + 26390n)}{(n)!^4396^{4n}} $
+\item $\sum_{i=0}^{[\frac{n}{2}]} \binom{x^{i^2}_{i,i+1}}{[\frac{i+3}{3}]} = \frac{\sqrt{\mu(i)^{\frac{3}{2}}(i^2 - 1)}}{\sqrt[3]{\rho(i)-2}+\sqrt[3]{\rho(i)-1}}$
+\end{enumerate}
+\pagebreak
+
+\section{\textbf{Tables (10 marks)}}
+%
+To combine rows a package must be imported with in your preamble, then you can use the XXXXXXX command in your document. The table below includes mathematical notations, which you can produce by embedding the expression in \$ \$ delimiters. For subscript, use underscore and for superscript, use carrot.
+\newline
+\begin{table}[H]
+\centering
+\resizebox{\columnwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
+\cline{3-11}
+\multicolumn{2}{c}{} & \multicolumn{5}{|c}{\textbf{Basic Properties}} & \multicolumn{4}{|c|}{\textbf{Readability}} \\
+\cline{3-11}
+\multicolumn{2}{c|}{} & \textbf{WC} & \textbf{SC} & \textbf{C-W} & \textbf{S-W} & \textbf{W-S} & \textbf{FK} & \textbf{GF} & \textbf{SMOG} & \textbf{LEX} \\
+\hline
+\multirow{2}{6em}{\textit{Baseline}} & Mean & 0.84 & 0.41 & \textbf{0.56} & \textbf{0.46} & \textbf{0.55} & \textbf{0.60} & 0.56 & 0.57 & 0.63 \\
+\cline{2-11}
+& SD & 0.07 & 0.08 & 0.06 & 0.07 & 0.05 & 0.05 & 0.06 & 0.07 & 0.05 \\
+\hline
+\hline
+\multirow{2}{6em}{\textit{ScaComp\textsubscript{h}}} & Mean & 0.89 & 0.46 & 0.53 & 0.43 & 0.53 & 0.58 & 0.54 & 0.56 & 0.62 \\
+\cline{2-11}
+& SD & 0.05 & 0.08 & 0.05 & 0.06 & 0.06 & 0.05 & 0.05 & 0.06 & 0.05 \\
+\hline
+\hline
+\multirow{2}{6em}{\textit{ScaComp\textsubscript{t}}} & Mean & \textbf{0.92} & {\bf 0.48} & 0.55 & 0.45 & 0.53 & 0.59 & {\bf 0.58} & {\bf 0.61} & {\bf 0.64} \\
+\cline{2-11}
+& SD & 0.04 & 0.07 & 0.05 & 0.04 & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 \\
+\hline
+
+%    a & b & c & d  \\
+ %   e & f & g & h 
+\end{tabular}   
+}
+\caption{Table depicting the use of both multirow and multicolumn}
+\end{table}
+{\LARGE In table 1 above, we try to demonstrate all the features required to be demonstrated in a table.  We use multiple newline, we use a package to enable the use of multiple rows,  and multiple columns in the table.Additionally,  We have also drawn lines from specific column to column.   We also use box resizing with a width specifier for resizing the box within the limits of the document, and avoid any overflow.}
+\pagebreak
+\section{\textbf{Image Insert (7 + 7 marks)}}
+\end{document}
