@@ -6,6 +6,25 @@
 \usepackage{multirow}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage[formats]{listings}
+\usepackage{color}
+\renewcommand\lstlistingname{Quelltext} % Change language of section name
+\lstset{ % General setup for the package
+	language=C++,
+	basicstyle=\small\sffamily,
+	%numbers=left,
+ 	%numberstyle=\tiny,
+ 	tabsize=5,
+	frame=t,
+	framesep = 3,
+	framextopmargin = 6pt,
+	columns=fixed,
+	showstringspaces=false,
+	showtabs=false,
+	keepspaces,
+	commentstyle=\color{green},
+	keywordstyle=\color{blue}
+}
 \begin{document}
 
 \renewcommand\thesection{\arabic{section}}
@@ -96,4 +115,33 @@ To combine rows a package must be imported with in your preamble, then you can u
 {\LARGE In table 1 above, we try to demonstrate all the features required to be demonstrated in a table.  We use multiple newline, we use a package to enable the use of multiple rows,  and multiple columns in the table.Additionally,  We have also drawn lines from specific column to column.   We also use box resizing with a width specifier for resizing the box within the limits of the document, and avoid any overflow.}
 \pagebreak
 \section{\textbf{Image Insert (7 + 7 marks)}}
+\pagebreak
+\section{\textbf{Algorithm and Pseudo Code (22 marks)}}
+\subsection{\textbf{Listing (10 marks)}}
+\begin{lstlisting}
+//Breadth First Search Function
+void BFS(list<long long int>queue,long long int length
+    ){
+     long long int v;
+     if(queue.empty())
+         return; 
+     list<long long int>::iterator i;
+     list<long long int>queue_temp;
+     while(!queue.empty()){
+          v=queue.front();
+          queue.pop_front();
+          for(i=adj[v].begin();
+               i!=adj[v].end();i++){
+               if(!pro_ver[*i]){
+                    result[*i]=length;
+                    queue_temp.push_back(*i);
+                    pro_ver[*i]=true;
+                    adj[*i].remove(v);
+               }
+          }
+     }
+     BFS(queue_temp,length+1);
+}
+\end{lstlisting}
+\pagebreak
 \end{document}
